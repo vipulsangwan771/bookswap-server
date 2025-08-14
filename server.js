@@ -18,10 +18,11 @@ const app = express();
 app.use(helmet({
   crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
+// const FRONTENDURI = 'http://localhost:3000';
+const FRONTENDURI = 'https://bookswap-front.onrender.com';
 
-const FRONTENDURI = 'http://localhost:3000';
 app.use(cors({
-    origin: FRONTENDURI || 'http://localhost:3000',
+    origin: FRONTENDURI || 'https://bookswap-front.onrender.com',
     credentials: true
 }));
 app.use(express.json());
